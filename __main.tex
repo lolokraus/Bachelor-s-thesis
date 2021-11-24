@@ -1,6 +1,6 @@
 % Copyright (C) 2014-2020 by Thomas Auzinger <thomas@auzinger.name>
 
-\documentclass[draft,final]{vutinfth} % Remove option 'final' to obtain debug information.
+\documentclass[draft,final,oneside]{vutinfth}% Remove option 'final' to obtain debug information.
 
 % Load packages to allow in- and output of non-ASCII characters.
 \usepackage{lmodern}        % Use an extension of the original Computer Modern font to minimize the use of bitmapped letters.
@@ -22,10 +22,11 @@
 \usepackage{todonotes} % Provides tooltip-like todo notes.
 \usepackage{hyperref}  % Enables cross linking in the electronic document version. This package has to be included second to last.
 \usepackage[acronym,toc]{glossaries} % Enables the generation of glossaries and lists fo acronyms. This package has to be included last.
+\usepackage{wrapfig}
 
 % Define convenience functions to use the author name and the thesis title in the PDF document properties.
 \newcommand{\authorname}{Lorenz Kraus} % The author name without titles.
-\newcommand{\thesistitle}{Title of the Thesis} % The title of the thesis. The English version should be used, if it exists.
+\newcommand{\thesistitle}{Uncanny Valley} % The title of the thesis. The English version should be used, if it exists.
 
 % Set PDF document properties
 \hypersetup{
@@ -42,6 +43,7 @@
 
 \nonzeroparskip             % Create space between paragraphs (optional).
 \setlength{\parindent}{0pt} % Remove paragraph identation (optional).
+\setlength {\marginparwidth }{2cm} 
 
 \makeindex      % Use an optional index.
 \makeglossaries % Use an optional glossary.
@@ -62,7 +64,8 @@
 \setregnumber{11733672}
 \setdate{01}{03}{2022} % Set date with 3 arguments: {day}{month}{year}.
 \settitle{\thesistitle}{} % Sets English and German version of the title (both can be English or German). If your title contains commas, enclose it with additional curvy brackets (i.e., {{your title}}) or define it as a macro as done with \thesistitle.
-\setsubtitle{}{} % Sets English and German version of the subtitle (both can be English or German).
+
+%\setsubtitle{}{} % Sets English and German version of the subtitle (both can be English or German).
 
 % Select the thesis type: bachelor / master / doctor / phd-school.
 % Bachelor:
@@ -78,7 +81,7 @@
 % The structure of the thesis has to conform to the guidelines at
 %  https://informatics.tuwien.ac.at/study-services
 
-\addtitlepage{english} % English title page.
+\addtitlepage{english}
 \AddStatementPage
 
 \begin{abstract}
@@ -87,23 +90,27 @@
 
 \selectlanguage{english}
 
-% Add a table of contents (toc).
 \tableofcontents % Starred version, i.e., \tableofcontents*, removes the self-entry.
 
-% Switch to arabic numbering and start the enumeration of chapters in the table of content.
-\mainmatter
+\mainmatter % Switch to arabic numbering and start the enumeration of chapters in the table of content.
 
-\chapter{Introduction}
-\input{original_uv}
+\input{_introduction}
 
-\chapter{Example}
-\input{example}
+\input{1}
 
+\input{2}
 
+%Brainstorm of possible next chapters respectively. what I want to include
+%TODO collect empirical data to different studies through time for different groups of people maybe combine with capter 5
+\input{3}
+
+\input{4}
+
+\input{5}
 
 \backmatter
-% Use an optional list of figures.
-%\listoffigures % Starred version, i.e., \listoffigures*, removes the toc entry.
+
+\listoffigures % Starred version, i.e., \listoffigures*, removes the toc entry.
 
 % Use an optional list of tables.
 %\cleardoublepage % Start list of tables on the next empty right hand page.
