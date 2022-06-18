@@ -428,7 +428,7 @@
   naustrian=Erkl\"arung zur Verfassung der Arbeit]{StatementChapter}%
 \CreatePolylingual[
   english={I hereby declare that I have written this Bachelor's Thesis
-    independently, that I have completely specified the utilized
+    independently, that I have completely specified the utilised
     sources and resources and that I have definitely marked all parts
     of the work - including tables, maps and figures - which belong
     to other works or to the internet, literally or extracted, by
